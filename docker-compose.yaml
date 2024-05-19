@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "${RABBIT_PORT}:5672"
+      - "${RABBIT_UI_PORT}:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "${RABBIT_USERNAME}"
+      RABBITMQ_DEFAULT_PASS: "${RABBIT_PASSWORD}"
